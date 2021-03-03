@@ -1,0 +1,16 @@
+{
+  "name": "Akashi 打刻 拡張",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "description": "",
+  "icons": {
+    "16": "icons/256.png",
+    "48": "icons/256.png",
+    "128": "icons/256.png"
+  },
+  "content_scripts": [{
+    "matches": ["https://atnd.ak4.jp/mypage/punch*"],
+    "js": ["index.js"],
+    "run_at": "document_end"
+  }]
+}
