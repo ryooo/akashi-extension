@@ -28,3 +28,4 @@ document.querySelectorAll(".c-circle-button").forEach(function(elem, i) {
     setTimeout(updateTable, 500);
   }, false);
 })
+updateTable();
