@@ -15,8 +15,14 @@ function updateTable() {
     .then(html => {
       let parser = new DOMParser()
       const dom = parser.parseFromString(html, "text/html")
-      const tableDom = dom.querySelector(".p-application-modal__table--blue");
-      baseDom.replaceChildren(tableDom)
+      let tableDom = dom.querySelector(".p-application-modal__table--blue");
+      if (tableDom == null) {
+        tableDom = dom.querySelector(".p-application-modal__table--small");
+        tableDom.querySelectorAll(".p-application-modal__table__delete").forEach(function(elem, i) {
+          elem.remove();
+        })
+      }
+      baseDom.replaceChildren(tableDom);
     })
     .catch(err => {
       console.log(err);
