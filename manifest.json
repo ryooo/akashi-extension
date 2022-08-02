@@ -10,7 +10,7 @@
   },
   "content_scripts": [{
     "matches": ["https://atnd.ak4.jp/mypage/punch*"],
-    "js": ["index.js"],
+    "js": ["dist/index.js"],
     "run_at": "document_end"
   }]
 }
